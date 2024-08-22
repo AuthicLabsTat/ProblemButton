@@ -36,7 +36,7 @@
       });
 
       // Mannenstem zegt "Hallo Yannick, good morning"
-      const utterance = new SpeechSynthesisUtterance('GOOOOOOOOOD Morning Yanni! I am your Owner, but the AI version..... I was created yesterday night....All I want to tell you is I LOVE YOU YEEEHAAAA');
+      const utterance = new SpeechSynthesisUtterance('GOOOOOOOOOD Morning Yanni! I am your Owner, but the AI version..... I was created yesterday night all by using AI....All I want to tell you is I LOVE YOU.....My dog have fun at the gym and let her Owner know how she did!... Niet te snel rijden!');
       utterance.voice = speechSynthesis.getVoices().find(voice => voice.name.includes('Male')); // Zoeken naar een mannenstem
       window.speechSynthesis.speak(utterance);
     }
