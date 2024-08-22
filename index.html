@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice Button</title>
+  <title>Confetti and Voice</title>
   <style>
     body {
       display: flex;
@@ -21,11 +21,18 @@
   </style>
 </head>
 <body>
-  <button onclick="speak()">Click Me</button>
+  <button onclick="celebrate()">Click Me</button>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
   <script>
-    function speak() {
-      const utterance = new SpeechSynthesisUtterance('Hello');
+    function celebrate() {
+      // Confetti effect
+      confetti();
+
+      // Voice saying "Hello World"
+      const utterance = new SpeechSynthesisUtterance('Hello World');
       window.speechSynthesis.speak(utterance);
     }
   </script>
