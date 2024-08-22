@@ -21,18 +21,23 @@
   </style>
 </head>
 <body>
-  <button onclick="celebrate()">Click Me</button>
+  <button onclick="celebrate()">Start</button>
 
   <!-- Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
   <script>
     function celebrate() {
-      // Confetti effect
-      confetti();
+      // Veel confetti-effect
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
 
-      // Voice saying "Hello World"
-      const utterance = new SpeechSynthesisUtterance('Hello World');
+      // Mannenstem zegt "Hallo Yannick, good morning"
+      const utterance = new SpeechSynthesisUtterance('GOOOOOOOOOD Morning Yanni! I am your Owner, but the AI version..... I was created yesterday night....All I want to tell you is I LOVE YOU YEEEHAAAA');
+      utterance.voice = speechSynthesis.getVoices().find(voice => voice.name.includes('Male')); // Zoeken naar een mannenstem
       window.speechSynthesis.speak(utterance);
     }
   </script>
