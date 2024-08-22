@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confetti and Voice</title>
+  <title>For Yanni 22/8/2024</title>
   <style>
     body {
       display: flex;
@@ -37,7 +37,7 @@
       });
 
       // Mannenstem zegt "Hallo Yannick, good morning"
-      const utterance = new SpeechSynthesisUtterance('GOOOOOOOOOD Morning Yanni! I am your Owner, but the AI version................... I was created yesterday night all by using AI to represent me when I sleep.........................All I want to tell you is I LOVE YOU ...........and is thinking of you right now in my dream...........................My dog have fun at the gym and let her Owner know how she did!....................... By the way, I have a lot of things i will show you when you are back. MY dog eat well and drive slow!');
+      const utterance = new SpeechSynthesisUtterance('GOOOOOOOOOD Morning Yanni! I am your Owner, but the AI version................... I was created yesterday night all by using AI Voice to represent me when I sleep.........................All I want to tell you is I LOVE YOU ...........and is thinking of you right now in my dream...........................My dog have fun at the gym and let her Owner know how she did!....................... By the way, I have a lot of things i will show you when you are back. MY dog eat well and drive slow!');
       utterance.voice = speechSynthesis.getVoices().find(voice => voice.name.includes('Male')); // Zoeken naar een mannenstem
       window.speechSynthesis.speak(utterance);
     }
